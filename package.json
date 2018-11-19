@@ -1,0 +1,22 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate updated with latest modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenuete/boilerplate.git"
+  },
+  "keywords": [
+    "#javascript#webpack#boilerplate"
+  ],
+  "author": "Kenuete DSouza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenuete/boilerplate/issues"
+  },
+  "homepage": "https://github.com/kenuete/boilerplate#readme"
+}
