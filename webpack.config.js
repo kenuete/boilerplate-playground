@@ -4,6 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 //const NpmInstallPlugin = require('npm-install-webpack-plugin')
 const webpack = require('webpack')
 const path = require('path')
+const before = require('./apis/apiConfig')
 
 const appsPath = './apps/'
 const environment = process.argv[2].substring(2)
@@ -24,6 +25,22 @@ module.exports = () => {
         output: {
             path: path.resolve(__dirname, 'dist')
         },
+        devServer: {
+            allowedHosts: [],
+            before: before,
+            //disableHostCheck: true,
+            hot: true,
+            hotOnly: true,
+            //https: true,
+            //index: 'index.html',
+            // proxy: {
+            //     '/api': {
+            //         target: 'http://any3rdparty:8000',
+            //         pathRewrite: { '^/api': '' },
+            //         secure: false
+            //     }
+            // }
+        },
         module: {
             rules: [
                 {
@@ -33,6 +50,17 @@ module.exports = () => {
                         'css-loader',
                         'sass-loader',
                     ],
+                },
+                {
+                    test: /\.(png|jpg|gif)$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                outputPath: 'assets/'
+                            }
+                        }
+                    ]
                 }
             ],
         },
