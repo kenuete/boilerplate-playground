@@ -1,2 +1,4 @@
 * Commands
-> npm run build -- --MY-BAG
+> npm start -- --TestApp
+> npm run build:dev -- --TestApp
+> npm run build -- --TestApp
