@@ -7,3 +7,11 @@ console.log('ok')
 console.log('ok')
 
 console.log(data)
+
+const testFn = () => {
+    return (
+        <div>
+            working!
+        </div>
+    )
+}
