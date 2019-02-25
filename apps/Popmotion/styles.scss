@@ -1,0 +1,11 @@
+#vanilla {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    transition: all 300ms ease-out;
+}
+
+#vanilla:hover {
+    background-color: red;
+    cursor: pointer;
+}

@@ -17,7 +17,7 @@ const mode = (environment == 'local' ? 'development' : environment)
 
 module.exports = () => {
 
-    console.log(`--App Name: ${appName}. --Set Node is ${environment}`)
+    console.log(`--App Name: ${appName}. --Set Node is ${mode}`)
 
     return {
         mode,
@@ -29,8 +29,8 @@ module.exports = () => {
             allowedHosts: [],
             before: before,
             //disableHostCheck: true,
-            hot: true,
-            hotOnly: true,
+            //hot: true,
+            //hotOnly: true,
             //https: true,
             //index: 'index.html',
             // proxy: {
