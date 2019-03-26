@@ -4,15 +4,12 @@
       "@babel/preset-env",
       {
         "targets": {
-          "browsers": ["last 2 versions", "safari >= 7"]
-        }
-      }
+          "browsers": ["last 2 versions", "ie >= 7"]
+        },
+        "useBuiltIns": "usage",
+      },
+      
     ],
     "@babel/preset-react",
-    "airbnb"
   ],
-  // "parser": "babel-eslint",
-  // "rules": {
-  //   "strict": 0
-  // }
 }
