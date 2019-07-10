@@ -6,6 +6,8 @@ const reducer = (state = {}, action) => ({
   value: action.value,
 })
 
+export default reducer
+
 // store
 const store = createStore(
   reducer,

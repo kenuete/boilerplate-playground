@@ -12,4 +12,14 @@
     ],
     "@babel/preset-react",
   ],
+  "plugins": [
+    "emotion",
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "apps": "./apps",
+        "apis": "lodash"
+      }
+    }]
+  ]
 }
