@@ -1,16 +1,35 @@
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 
 // reducers
-const reducer = (state = {}, action) => ({
-  ...state,
-  value: action.value,
-})
+const reducerForName = (state = {}, action) => {
+  switch (action.type) {
+    case 'SET_NAME':
+      return {
+        ...state,
+        value: action.value,
+      }
+    default: return state
+  }
+}
 
-export default reducer
+const reducerForPlace = (state = {}, action) => {
+  switch (action.type) {
+    case 'SET_PLACE':
+      return {
+        ...state,
+        value: action.value,
+      }
+    default: return state
+  }
+}
 
+const combinedState = {
+  name: reducerForName,
+  place: reducerForPlace,
+}
 // store
 const store = createStore(
-  reducer,
+  combineReducers(combinedState),
   // eslint-disable-next-line no-underscore-dangle
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 )
@@ -21,7 +40,13 @@ const setName = {
   value: 'John Doe',
 }
 
+const setPlace = {
+  type: 'SET_PLACE',
+  value: 'Melbourne',
+}
+
 // dispatch action
 store.dispatch(setName)
+store.dispatch(setPlace)
 
 // action creators

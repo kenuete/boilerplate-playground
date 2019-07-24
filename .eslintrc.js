@@ -11,6 +11,7 @@ module.exports = {
   "plugins": [
     "react",
     "react-hooks",
+    "jest",
   ],
   globals: {
     "document": true,
@@ -20,5 +21,8 @@ module.exports = {
     'import/resolver': {
       "babel-module": {}
     }
-  }
+  },
+  env: {
+    "jest": true
+}
 };
