@@ -3,12 +3,13 @@ import ReactDom from 'react-dom'
 
 const Child = ({ count }) => {
   const [localCount, setLocalcount] = useState(0)
+
   useEffect(() => {
     setLocalcount(count)
   }, [count])
-  console.log('here1')
+
+
   if (localCount === 0) {
-    console.log('here')
     setLocalcount(count)
   }
   return <p>{localCount}</p>

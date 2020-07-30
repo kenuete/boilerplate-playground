@@ -1,0 +1,32 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 180px));
+  //   border: 1px solid black;
+  grid-gap: 2px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (max-width: 414px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  div {
+    border: 1px solid black;
+  }
+
+  .cell1 {
+  }
+}
+
+//tip 1: dont set height for the container unless you need to. Always imagine the
+//layout by template
+
+/*
+  1. Container
+  > if grid then width is full unless the template columns specified and height is auto.
+  > if inline grid, both height and width are auto.
+  > draw the template as specified by the rows and columns.
+  > place the contents in the layout/cells created by the template.
+  */
+//https://learncssgrid.com/

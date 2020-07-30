@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  height: 500px;
+  //   grid-template-columns: repeat(2, 200px);
+  border: 1px solid black;
+  grid-auto-columns: 80px;
+  grid-auto-flow: column;
+  justify-items: center;
+
+  div {
+    border: 1px solid black;
+  }
+}
+
+//tip 1: dont set height for the container unless you need to. Always imagine the
+//layout by template
+
+/*
+1. Container
+> if grid then width is full unless the template columns specified and height is auto.
+> if inline grid, both height and width are auto.
+> draw the template as specified by the rows and columns.
+> place the contents in the layout/cells created by the template.
+*/
+//https://learncssgrid.com/
